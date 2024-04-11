@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    color: #000000;
+  }
+  /* .logo{
+    height:40px;
+    width: 40px;
+    padding: 5px;
+    background-color: ButtonShadow;
+  } */
+  .heading{
+    padding: 5px;
+    width: 100%;
+    border:2px solid #000000   ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: ButtonShadow;
+    border-radius: 5px;
+  }
+  
+  .icon {
+   /* background-color: #ffffff; */
+   padding: 5px;
+   font-size: 40px;
+   border: none;
+   display: inline-block;
+   font-weight: 500;
+   margin-left: 35px;
+      margin-right: 20px;
+      background-color: ButtonShadow;
+      border-radius: 10px;
+  }
+  .icon a{
+    color: #000000;
+  }
+  .menubar{
+    padding: 10px;
+    width: 100%;
+    border:2px solid #000000;
+    display: flex;  
+    justify-content: space-between;
+    border-top: 0px solid #000000;
+    width: 100%;
+    background-color: ButtonShadow;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .ref{
+    width: 20%;
+    font-size: 20px;
+  }
+  .ref a{
+    color: #000000;
+  }
+  
+  .dropbtn {
+   background-color: #ffffff;
+   color: #000000;
+   padding: 6px;
+   font-size: 16px;
+   /* border:2px solid #53CDE2;  */
+   text-decoration: none;
+   margin-right: 20px;
+   background-color: ButtonShadow;
+  }
+  .dropdown {
+   position: relative;
+   display:inline-block;
+   background-color: ButtonShadow;
+  }
+  
+  .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #ffffff;
+   border-top: 0px solid #000000;
+   min-width: 160px;
+   border:2px solid #000000;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   margin-left: -70px;
+   color: #000000;
+   background-color: ButtonShadow;
+  }
+  
+  .dropdown-content a {
+   color: #000000;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   background-color: ButtonShadow;
+  }
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .header {
+    text-align: center;
+    padding: 5px;
+  }
+  .navbar {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    
+  }
+ 
+  
+  .navbar a{
+    border:2px solid #000000;
+    padding: 3.25px;
+    margin-left: 0px;
+    font-size: 25px;
+    border-left: 0px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .line1{
+    display: flex;
+    flex-wrap:wrap ;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .card {
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    width: 300px;
+    height: 470px;
+    margin: 30px;  
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: ButtonShadow; 
+  }
+  .card:hover{
+   transform: scale(1.05);
+  }
+  .card-body{
+    
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .card img{
+    /* padding-top: 20px; */
+    margin: auto;  
+    display: flex;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    margin-top: 40px;
+    border-radius: 5px;
+  }
+  .line1 a{
+   text-decoration: none;
+   display: flex;
+   margin-left: 10px;
+  }
+  .card-body h5{
+   color: #000000;
+   margin-top: 5px;
+   text-decoration: none;
+   margin-left: 0px;
+   margin-right: 0px;
+   padding: auto;
+   font-size: 20px;
+  }
+  .card-body h4{
+   color: #000000;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 0px;
+   text-decoration: none;  
+   padding: auto;
+   font-size: 25px;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  

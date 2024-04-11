@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us Form</title>
+<link rel="shortcut icon" href="logo.jpg" />
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* Set dark background */
+    body {
+        background-color: #daeff4;
+        font-family: 'Roboto Mono', monospace;
+        color: #005792;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    /* Additional styles */
+    .heading {
+        padding: 5px;
+        width: 100%;
+        border: 2px solid #53CDE2;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .icon {
+        background-color: #daeff4;
+        font-size: 40px;
+        border: none;
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 35px;
+        margin-right: 20px;
+    }
+    .icon a {
+        color: #005792;
+    }
+    .menubar {
+        padding: 10px;
+        width: 100%;
+        border: 2px solid #53CDE2;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0px solid #53CDE2;
+        width: 100%;
+    }
+    .ref {
+        width: 20%;
+        font-size: 20px;
+    }
+    .ref a {
+        color: #005792;
+    }
+    .dropbtn {
+        background-color: #daeff4;
+        color: #005792;
+        padding: 6px;
+        font-size: 16px;
+        border: 2px solid #53CDE2;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #daeff4;
+        border-top: 0px solid #53CDE2;
+        min-width: 160px;
+        border: 2px solid #53CDE2;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-left: -70px;
+        color: #005792;
+    }
+    .dropdown-content a {
+        color: #005792;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .header {
+        text-align: center;
+        padding: 20px;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+    input[type="text"] {
+        width: 30%;
+        padding: 10px;
+        border: none;
+        background-color: #daeff4;
+        color: #005792;
+        border: 2px solid #53CDE2;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .navbar a {
+        color: #005792;
+    }
+    .line1 {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+    .card {
+        border: 2px solid #53CDE2;
+        background-color: #D1F4FA;
+        width: 300px;
+        height: 400px;
+        margin: 30px;
+        text-decoration: none;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card-body {
+        text-align: center;
+        text-decoration: none;
+    }
+    .card img {
+        padding-top: 20px;
+        margin: auto;
+        display: flex;
+        width: 180px;
+        height: 180px;
+        text-decoration: none;
+    }
+    .line1 a {
+        text-decoration: none;
+        display: flex;
+        margin-left: 10px;
+    }
+    .card-body h5 {
+        color: #005792;
+        margin-top: 5px;
+        text-decoration: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: auto;
+        font-size: 20px;
+    }
+    .card-body h4 {
+        color: #005792;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-decoration: none;
+        padding: auto;
+        font-size: 25px;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    /* History section styles */
+    .history {
+        grid-column: 1 / span 1;
+    }
+    /* Algorithm list styles */
+    .algorithms {
+        grid-column: 2 / span 1;
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+    
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter email" required>
+    
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter somthing" required ></textarea>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var jsonData = {};
+            formData.forEach(function(value, key) {
+                jsonData[key] = value;
+            });
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "YOUR_SERVER_ENDPOINT_HERE"); // Replace YOUR_SERVER_ENDPOINT_HERE with your server endpoint
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onload = function() {
+                // if (xhr.status === 200) {
+                    // Display thank you message
+                    var thankYouMessage = document.createElement("div");
+                    thankYouMessage.textContent = "Thank you for contacting us!";
+                    document.body.appendChild(thankYouMessage);
+                    // Reset the form after submission
+                    document.getElementById("contactForm").reset();
+                    // Redirect to main index file after a short delay
+                    setTimeout(function() {
+                        window.location.href = "index.html";
+                    }, 2000); // 2000 milliseconds = 2 seconds
+                // } else {
+                    // alert("Error sending message. Please try again later.");
+                // }
+            };
+            xhr.send(JSON.stringify(jsonData));
+        });
+    </script>
+    
+    </body>
+    </html>
